@@ -1,1 +1,1 @@
-export {default as Main} from './Content.svelte';
+export {default as Content} from './Content.svelte';
