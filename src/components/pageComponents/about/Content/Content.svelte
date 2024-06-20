@@ -3,8 +3,8 @@
     <div>Telegram</div>
     <div>VK</div>
     <div>Instagram</div>
-    <div>Shop</div>
-    <div>Donate</div>
+    <a href="/shop">Shop</a>
+    <a href="/donate">Donate</a>
 </div>
 
 <style>
