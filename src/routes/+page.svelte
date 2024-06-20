@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Content from "../components/pageComponents/about/Content/Content.svelte";
+import { Main } from "../components/templates/Main";
+
+</script>
+
+
+<Main>
+    <Content slot="content" />
+</Main>
