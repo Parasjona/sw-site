@@ -1,12 +1,7 @@
 <script>
-	import IconLinkButton from "../../../atoms/IconLinkButton/IconLinkButton.svelte";
-	import LinkButton from "../../../atoms/LinkButton/LinkButton.svelte";
-  import Logo from './icons/logo.svelte';
-  import InstLogo from './icons/instLogo.svelte';
-  import MbLogo from './icons/mbLogo.svelte';
-  import T13Logo from './icons/t13Logo.svelte';
-  import TgLogo from './icons/tgLogo.svelte';
-  import VkLogo from './icons/vkLogo.svelte';
+	import { IconLinkButton } from "../../../atoms/IconLinkButton";
+	import { LinkButton } from "../../../atoms/LinkButton";
+  import { Logo, InstLogo, MbLogo, T13Logo, TgLogo, VkLogo } from './icons/index';
 </script>
 
 <div class="wrapper">
