@@ -10,6 +10,7 @@
         flex-direction: column;
         scroll-behavior: smooth;
         width: 100%;
+        height: 100vh;
         overflow: auto;
     }
 </style>
