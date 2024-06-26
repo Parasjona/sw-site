@@ -23,15 +23,24 @@
     .header-text {
       margin-bottom: 20px;
       font-size: 35px;
+      @media (max-width: 700px) {
+        font-size: 20px;
+      }
     }
     .sub-header-text {
       margin-bottom: 20px;
       font-size: 30px;
+      @media (max-width: 700px) {
+        font-size: 15px;
+      }
     }
     .comment-text {
       margin-top: 20px;
       font-weight: bold;
       font-size: 20px;
+      @media (max-width: 700px) {
+        font-size: 13px;
+      }
     }
     .copy-text {
       width: 500px;
@@ -39,8 +48,12 @@
       padding: 5px 10px;
       border: 20px solid rgb(230, 230, 230);
       background-color: rgb(204, 204, 204);
-      font-size: 25px;
       margin-bottom: 10px;
       cursor: pointer;
+      font-size: 25px;
+      @media (max-width: 700px) {
+        width: 70%;
+        font-size: 15px;
+      }
     }
 </style>
