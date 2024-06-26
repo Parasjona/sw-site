@@ -8,3 +8,16 @@
 body {
   margin: 0;
 }
+
+:root {
+  --yellow: rgb(243, 219, 9);
+  --dark-yellow: rgb(204, 153, 0);
+  --red: rgb(204, 0, 0);
+
+  --link-button-shadow: 0px 0px 0px 3px rgb(204, 153, 0) inset, 0px 0px 0px -3px rgb(204, 153, 0) inset;
+  --hover-shadow: 0px 0px 10px 0px black;
+  --active-shadow: 0px 0px 10px 0px red;
+
+  --link-button-border: 3px solid black;
+  --link-button-border-radius: 17px;
+}
