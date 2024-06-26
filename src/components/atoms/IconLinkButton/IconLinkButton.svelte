@@ -18,25 +18,23 @@
     width: 57px;
     height: 57px;
 
-    border: 3px solid black;
-    border-radius: 17px;
+    border: var(--link-button-border);
+    border-radius: var(--link-button-border-radius);
+    box-shadow: var(--link-button-shadow);
 
-    background-color: rgb(243, 219, 9);
-    color: rgb(204, 0, 0);
+    background-color: var(--yellow);
+    color: var(--red);
 
     font-family: 'Texas Tango';
-  }
-  a:after
-  {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      border: 3px solid rgb(204, 153, 0);
-      border-radius: 14px;
+
+    &:hover {
+      border: none;
+      box-shadow: var(--hover-shadow);
+    }
+    &:active {
+      border: none;
+      box-shadow: var(--active-shadow);
+    }
   }
     .icon-logo-wrapper {
       display: flex;
