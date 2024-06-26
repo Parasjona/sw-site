@@ -1,6 +1,12 @@
+<script>
+  import { copy } from 'svelte-copy';
+</script>
+
 <div class="wrapper">
     <div class="header-text">Поддержать проект можно рублем</div>
     <div class="sub-header-text">СБП "Сбербанк"<br />Роман Сергеевич М.</div>
+    <div class="copy-text" use:copy={'+79119998933'}>+7 911 999 89 33<br />скопировать номер телефона</div>
+    <div class="copy-text" use:copy={'2202206314670147'}>2202206314670147<br />скопировать номер карты</div>
     <div class="comment-text">Просьба писать в комментарии к переводу<br />"на развитие Snake Way"</div>
 </div>
 
