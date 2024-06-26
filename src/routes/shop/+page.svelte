@@ -3,9 +3,9 @@
 </script>
 
 <nav>
-	<a href="/">home</a>
-	<a href="/donate">donate</a>
-	<a href="/shop">shop</a>
+	<a href="/sw-site/">home</a>
+	<a href="/sw-site/donate">donate</a>
+	<a href="/sw-site/shop">shop</a>
 </nav>
 <Main>
     <div slot="content">
