@@ -27,8 +27,8 @@
       </IconLinkButton>
     </div>
     <div class="buttons-wrapper">
-      <LinkButton href="/shop">Shop</LinkButton>
-      <LinkButton href="/donate">Donate</LinkButton>
+      <LinkButton href="/sw-site/shop">Shop</LinkButton>
+      <LinkButton href="/sw-site/donate">Donate</LinkButton>
   </div>
 </div>
 
