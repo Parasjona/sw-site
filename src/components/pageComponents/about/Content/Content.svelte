@@ -6,7 +6,7 @@
 
 <div class="wrapper">
 	<div class="logo-wrapper">
-		<Logo />
+    <img class="dark-shadow" src="src\components\pageComponents\about\Content\icons\logo.svg" alt="logo" />
 	</div>
 
 	<div class="buttons-wrapper">
@@ -44,10 +44,25 @@
 	.logo-wrapper {
 		width: 436px;
 		height: 436px;
+		@media (max-width: 640px) {
+      width: 330px;
+      height: 330px;
+		}
 	}
 	.buttons-wrapper {
 		display: flex;
 		width: 355px;
 		justify-content: space-between;
+		@media (max-width: 640px) {
+      width: 340px;
+		}
 	}
+  img{
+    &:hover {
+      filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1));
+		}
+		&:active {
+      filter: drop-shadow(0px 0px 3px rgb(210, 22, 22));
+		}
+  }
 </style>
