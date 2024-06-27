@@ -42,7 +42,7 @@
 	}
 	.comment-text {
 		margin-top: 20px;
-		font-weight: bold;
+		font-family: 'Century Gothic Bold';
 		font-size: 20px;
 		@media (max-width: 700px) {
 			font-size: 13px;

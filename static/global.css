@@ -4,6 +4,18 @@
 	font-weight: bold;
 	font-style: normal;
 }
+@font-face {
+	font-family: Century Gothic;
+	src: url('fonts/centurygothic.ttf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Century Gothic Bold;
+	src: url('fonts/centurygothic_bold.ttf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
 
 body {
 	margin: 0;
