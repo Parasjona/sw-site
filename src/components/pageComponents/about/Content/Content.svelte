@@ -10,19 +10,19 @@
     </div>
 
     <div class="buttons-wrapper">
-      <IconLinkButton>
+      <IconLinkButton href="https://t.me/snakewayspb">
         <TgLogo />
       </IconLinkButton>
-      <IconLinkButton>
+      <IconLinkButton href="https://vk.com/snakeway">
         <VkLogo />
       </IconLinkButton>
-      <IconLinkButton>
+      <IconLinkButton href="https://www.instagram.com/snakeway.spb/">
         <InstLogo />
       </IconLinkButton>
-      <IconLinkButton>
+      <IconLinkButton href="https://www.motobratan.ru/56047/">
         <MbLogo />
       </IconLinkButton>
-      <IconLinkButton>
+      <IconLinkButton href="https://team-13.ru/user/10477/">
         <T13Logo />
       </IconLinkButton>
     </div>
