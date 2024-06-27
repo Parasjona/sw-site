@@ -6,7 +6,7 @@
 
 <div class="wrapper">
 	<div class="logo-wrapper">
-    <img class="dark-shadow" src="src\components\pageComponents\about\Content\icons\logo.svg" alt="logo" />
+    <img class="dark-shadow" src="src/components/pageComponents/about/Content/icons/logo.svg" alt="logo" />
 	</div>
 
 	<div class="buttons-wrapper">
