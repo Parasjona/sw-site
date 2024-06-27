@@ -2,7 +2,7 @@
   export let href: string = '#';
 </script>
 
-<a {...$$restProps} {href}>
+<a {...$$restProps} {href} target="_self">
   <div>
     <slot />
   </div>
