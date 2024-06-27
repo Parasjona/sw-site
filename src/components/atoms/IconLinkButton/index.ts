@@ -1,1 +1,1 @@
-export {default as IconLinkButton} from './IconLinkButton.svelte';
+export { default as IconLinkButton } from './IconLinkButton.svelte';
