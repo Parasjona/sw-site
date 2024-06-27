@@ -62,7 +62,8 @@
 		}
 		@media (max-width: 700px) {
 			width: 70%;
-			font-size: 15px;
+			font-size: 13px;
+			border-width: 10px;
 		}
 	}
 </style>
