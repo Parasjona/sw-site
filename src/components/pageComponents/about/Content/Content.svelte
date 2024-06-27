@@ -1,12 +1,13 @@
 <script>
 	import { IconLinkButton } from '../../../atoms/IconLinkButton';
 	import { LinkButton } from '../../../atoms/LinkButton';
-	import { Logo, InstLogo, MbLogo, T13Logo, TgLogo, VkLogo } from './icons/index';
+	import { InstLogo, MbLogo, T13Logo, TgLogo, VkLogo } from './icons/index';
+  import Cover from './icons/logo.svg';
 </script>
 
 <div class="wrapper">
 	<div class="logo-wrapper">
-    <img class="dark-shadow" src="src/components/pageComponents/about/Content/icons/logo.svg" alt="logo" />
+    <img src={Cover} alt="logo" />
 	</div>
 
 	<div class="buttons-wrapper">
