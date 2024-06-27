@@ -50,4 +50,8 @@
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
+  .icon-logo-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
 </style>
