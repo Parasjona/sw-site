@@ -1,9 +1,16 @@
 <script lang="ts">
-  export let width: string = "39.45";
-  export let height: string = "24.63";
+	export let width: string = '39.45';
+	export let height: string = '24.63';
 </script>
 
-<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" {width} {height} viewBox="0 0 39.45 24.63">
+<svg
+	id="_Слой_2"
+	data-name="Слой 2"
+	xmlns="http://www.w3.org/2000/svg"
+	{width}
+	{height}
+	viewBox="0 0 39.45 24.63"
+>
 	<defs>
 		<style>
 			.cls-1 {

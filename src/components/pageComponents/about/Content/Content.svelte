@@ -2,12 +2,12 @@
 	import { IconLinkButton } from '../../../atoms/IconLinkButton';
 	import { LinkButton } from '../../../atoms/LinkButton';
 	import { InstLogo, MbLogo, T13Logo, TgLogo, VkLogo } from './icons/index';
-  import Cover from './icons/logo.svg';
+	import Cover from './icons/logo.svg';
 </script>
 
 <div class="wrapper">
 	<div class="logo-wrapper">
-    <img src={Cover} alt="logo" />
+		<img src={Cover} alt="logo" />
 	</div>
 
 	<div class="buttons-wrapper">
@@ -46,8 +46,8 @@
 		width: 436px;
 		height: 436px;
 		@media (max-width: 640px) {
-      width: 330px;
-      height: 330px;
+			width: 330px;
+			height: 330px;
 		}
 	}
 	.buttons-wrapper {
@@ -55,15 +55,15 @@
 		width: 355px;
 		justify-content: space-between;
 		@media (max-width: 640px) {
-      width: 340px;
+			width: 340px;
 		}
 	}
-  img{
-    &:hover {
-      filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1));
+	img {
+		&:hover {
+			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1));
 		}
 		&:active {
-      filter: drop-shadow(0px 0px 3px rgb(210, 22, 22));
+			filter: drop-shadow(0px 0px 3px rgb(210, 22, 22));
 		}
-  }
+	}
 </style>
