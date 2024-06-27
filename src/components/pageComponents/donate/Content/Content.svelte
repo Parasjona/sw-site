@@ -61,7 +61,7 @@
 			background-color: rgb(145, 145, 145);
 		}
 		@media (max-width: 700px) {
-			width: 70%;
+			width: 90%;
 			font-size: 13px;
 			border-width: 10px;
 		}
