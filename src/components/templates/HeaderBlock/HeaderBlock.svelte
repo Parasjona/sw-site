@@ -8,10 +8,10 @@
 	.header-wrapper {
 		display: flex;
 		justify-content: space-between;
-		padding: 20px 40px;
+		padding: 20px 0;
 
 		@media (max-width: 700px) {
-			padding: 10px 20px;
+			padding: 10px 0;
 		}
 	}
 </style>
