@@ -86,5 +86,16 @@
 		background-color: var(--button-base-grey);
 		font-family: 'Century Gothic Bold';
 		font-size: 30px;
+
+		&:hover {
+			box-shadow: var(--hover-shadow);
+			background-color: var(--button-hover-grey);
+		}
+		font-size: 30px;
+
+		&:active {
+			background-color: var(--button-press-grey);
+			box-shadow: none;
+		}
 	}
 </style>
