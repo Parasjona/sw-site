@@ -4,6 +4,7 @@
 	export let price: string;
 	export let photo: string[] = [''];
 	import { base } from '$app/paths';
+	import Slider from './Slider.svelte';
 
 	const CARD_WIDTH = 293;
 	const createSrcUrl = (photo: string) => {
@@ -14,14 +15,13 @@
 	let imgIndex = 0;
 	let imgNumber = photo ? photo.length : 0;
 	let sliderWidth = imgNumber > 1 ? CARD_WIDTH / imgNumber : 0;
-	let style: string = undefined;
 
 	let srcUrl = createSrcUrl(photo[imgIndex]);
 
-	$: {
-		const left = imgIndex * sliderWidth;
-		style = `width: ${sliderWidth}px; left: ${left}px`;
-	}
+	const handleMouseEnter = (index: number) => {
+		imgIndex = index;
+		srcUrl = createSrcUrl(photo[imgIndex]);
+	};
 </script>
 
 <div class="product-card">
@@ -29,7 +29,13 @@
 		{#if srcUrl}
 			<img class="avatar" src={srcUrl} alt={name} />
 			<div class="product-card-photo-block-slideline-zone">
-				<div class="product-card-photo-block-slider" {style}></div>
+				{#each Array(imgNumber) as _, index (index)}
+					<Slider
+						width={sliderWidth}
+						aria-current={index === imgIndex}
+						on:mouseenter={(e) => handleMouseEnter(index)}
+					/>
+				{/each}
 			</div>
 		{:else}
 			<div class="product-card-text">Товар на фотосессии</div>
@@ -66,14 +72,7 @@
 		left: 0;
 		height: 10px;
 		width: 100%;
-	}
-	.product-card-photo-block-slider {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background-color: var(--yellow);
-		opacity: 0.7;
-		height: 100%;
+		display: flex;
 	}
 	.product-card-text {
 		text-align: center;
