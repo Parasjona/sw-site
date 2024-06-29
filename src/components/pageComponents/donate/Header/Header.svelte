@@ -1,12 +1,14 @@
 <script>
-	import {Breadcrumbs, BreadcrumbItem} from '@components/molecules/Breadcrumbs';
+	import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
+	import { HeaderBlock } from '@components/templates/HeaderBlock';
 </script>
 
-<Breadcrumbs>
-  <BreadcrumbItem isActive url=".\">Главная</BreadcrumbItem>
-  <BreadcrumbItem>Donate</BreadcrumbItem>
-</Breadcrumbs>
+<HeaderBlock>
+	<Breadcrumbs>
+		<BreadcrumbItem isActive url=".\">Главная</BreadcrumbItem>
+		<BreadcrumbItem>Donate</BreadcrumbItem>
+	</Breadcrumbs>
+</HeaderBlock>
 
 <style>
-
 </style>
