@@ -25,6 +25,8 @@ body {
 	--yellow: rgb(243, 219, 9);
 	--dark-yellow: rgb(204, 153, 0);
 	--red: rgb(204, 0, 0);
+	--light-grey: rgb(230, 230, 230);
+	--button-base-grey: rgb(204, 204, 204);
 
 	--link-button-shadow: 0px 0px 0px 3px rgb(204, 153, 0) inset,
 		0px 0px 0px -3px rgb(204, 153, 0) inset;
