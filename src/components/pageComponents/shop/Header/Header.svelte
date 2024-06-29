@@ -29,7 +29,6 @@
 		display: flex;
 		justify-content: flex-end;
 		box-sizing: border-box;
-		border: 1px solid black;
 	}
 	.shoppping-cart-icon {
 		height: 39px;
