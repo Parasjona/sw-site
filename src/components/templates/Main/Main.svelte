@@ -1,5 +1,6 @@
 <main>
-	<slot name="content">Content slot</slot>
+	<slot name="header"></slot>
+  <slot name="content">Content slot</slot>
 </main>
 
 <style>
