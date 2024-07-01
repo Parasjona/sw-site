@@ -1,11 +1,49 @@
+@import './ProductCardButton.css';
+
+.modal-wrapper {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
 .modal-header {
 	font-size: 30px;
 }
 .modal-line-wrapper {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: 10px;
 }
 .modal-price {
 	font-size: 35px;
 	flex-grow: 1;
+}
+.modal-button {
+	width: 290px;
+	height: 62px;
+	font-size: 25px;
+	flex-shrink: 0;
+}
+.modal-text {
+	font-size: 28px;
+}
+.modal-quantity-text {
+	font-size: 28px;
+	width: 28px;
+	text-align: center;
+}
+.modal-quantity-block {
+	display: flex;
+	align-items: center;
+}
+.modal-quantity-button {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	font-size: 25px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

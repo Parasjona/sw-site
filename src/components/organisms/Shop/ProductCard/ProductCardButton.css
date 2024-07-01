@@ -1,6 +1,12 @@
 button {
 	all: unset;
 	cursor: pointer;
+	box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	background-color: var(--button-base-grey);
 
 	&:hover {
@@ -12,27 +18,4 @@ button {
 		background-color: var(--button-press-grey);
 		box-shadow: none;
 	}
-}
-.product-card-button {
-	width: 272px;
-	height: 58px;
-	font-family: 'Century Gothic Bold';
-	font-size: 30px;
-
-	&:hover {
-		box-shadow: var(--hover-shadow);
-		background-color: var(--button-hover-grey);
-	}
-
-	&:active {
-		background-color: var(--button-press-grey);
-		box-shadow: none;
-	}
-}
-
-.modal-button {
-	width: 290px;
-	height: 62px;
-	font-size: 25px;
-	flex-shrink: 0;
 }

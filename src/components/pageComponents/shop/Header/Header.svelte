@@ -2,10 +2,10 @@
 	import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
 	import { HeaderBlock } from '@components/templates/HeaderBlock';
 	import { Badge } from '@components/atoms/Badge';
-	import ShoppingCart from './icons/shoppingCart.svelte';
-	import { count } from '../stores.ts';
+	import ShopingCart from './icons/shopingCart.svelte';
+	import { cartQuantity } from '@components/store/cartQuantity';
 
-  const homeUrl = ".\\";
+	const homeUrl = '.\\';
 </script>
 
 <HeaderBlock>

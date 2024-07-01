@@ -2,7 +2,7 @@
 	import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
 	import { HeaderBlock } from '@components/templates/HeaderBlock';
 
-  const homeUrl = ".\\";
+	const homeUrl = '.\\';
 </script>
 
 <HeaderBlock>

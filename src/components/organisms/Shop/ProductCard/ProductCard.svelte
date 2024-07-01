@@ -5,7 +5,6 @@
 	export let photo: string[] = [''];
 	import { base } from '$app/paths';
 	import Slider from './Slider.svelte';
-	import { Modal } from '../../../molecules/Modal';
 	import ProductCardModal from './ProductCardModal.svelte';
 
 	let showModal = false;
