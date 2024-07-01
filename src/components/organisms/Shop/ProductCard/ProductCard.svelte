@@ -5,6 +5,10 @@
 	export let photo: string[] = [''];
 	import { base } from '$app/paths';
 	import Slider from './Slider.svelte';
+	import { Modal } from '../../../molecules/Modal';
+	import ProductCardModal from './ProductCardModal.svelte';
+
+	let showModal = false;
 
 	const CARD_WIDTH = 293;
 	const createSrcUrl = (photo: string) => {
@@ -44,58 +48,12 @@
 	<div class="product-card-text">{name}</div>
 	<div class="product-card-text">{category}</div>
 	<div class="product-card-text">{price}</div>
-	<button>В КОРЗИНУ</button>
+	<button class="product-card-button" on:click={() => (showModal = true)}>В КОРЗИНУ</button>
 </div>
 
+<ProductCardModal bind:showModal {name} {price} />
+
 <style>
-	.product-card {
-		height: 375px;
-		background-color: var(--light-grey);
-		padding: 0;
-
-		&:hover {
-			box-shadow: var(--hover-shadow);
-		}
-	}
-	.product-card-photo-block {
-		position: relative;
-		width: 293px;
-		height: 210px;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.product-card-photo-block-slideline-zone {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: 10px;
-		width: 100%;
-		display: flex;
-	}
-	.product-card-text {
-		text-align: center;
-		font-size: 23px;
-	}
-	button {
-		all: unset;
-		cursor: pointer;
-		width: 272px;
-		height: 58px;
-		background-color: var(--button-base-grey);
-		font-family: 'Century Gothic Bold';
-		font-size: 30px;
-
-		&:hover {
-			box-shadow: var(--hover-shadow);
-			background-color: var(--button-hover-grey);
-		}
-		font-size: 30px;
-
-		&:active {
-			background-color: var(--button-press-grey);
-			box-shadow: none;
-		}
-	}
+	@import './ProductCard.css';
+	@import './ProductCardButton.css';
 </style>

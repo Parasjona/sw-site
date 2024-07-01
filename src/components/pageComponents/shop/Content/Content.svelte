@@ -1,5 +1,5 @@
 <script>
-	import { ProductCard } from '@components/molecules/ProductCard';
+	import { Shop } from '@components/organisms/Shop';
 
 	const products = [
 		{
@@ -25,21 +25,6 @@
 	];
 </script>
 
-<div class="wrapper">
-	{#each products as item}
-		<ProductCard {...item} />
-	{/each}
-</div>
+<Shop {products} />
 
-<style>
-	.wrapper {
-		box-sizing: border-box;
-		text-align: center;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 10px;
-		font-family: 'Century Gothic';
-	}
-</style>
+<style></style>

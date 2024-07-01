@@ -1,0 +1,11 @@
+.modal-header {
+	font-size: 30px;
+}
+.modal-line-wrapper {
+	display: flex;
+	align-items: center;
+}
+.modal-price {
+	font-size: 35px;
+	flex-grow: 1;
+}
