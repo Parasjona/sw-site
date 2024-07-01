@@ -20,8 +20,18 @@
 			price: '1300р.',
 			photo: ['flag1.png', 'flag2.png']
 		},
-		{ name: 'Кепка', category: 'Snake Way Division', price: '2000р.' },
-		{ name: 'Футболка', category: 'Snake Way Division', price: '3000р.' }
+		{
+			name: 'Кепка',
+			category: 'Snake Way Division',
+			price: '2000р.',
+			sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL']
+		},
+		{
+			name: 'Футболка',
+			category: 'Snake Way Division',
+			price: '3000р.',
+			sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL']
+		}
 	];
 </script>
 

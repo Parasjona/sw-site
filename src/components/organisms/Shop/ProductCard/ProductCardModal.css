@@ -15,6 +15,12 @@
 	justify-content: center;
 	gap: 10px;
 }
+.modal-switcher-line-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
 .modal-price {
 	font-size: 35px;
 	flex-grow: 1;
@@ -46,4 +52,5 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--button-base-grey);
 }

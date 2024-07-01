@@ -1,11 +1,14 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+	import Slider from './Slider.svelte';
+	import ProductCardModal from './ProductCardModal.svelte';
+
 	export let name: string;
 	export let category: string = 'Snake Way Division';
 	export let price: string;
 	export let photo: string[] = [''];
-	import { base } from '$app/paths';
-	import Slider from './Slider.svelte';
-	import ProductCardModal from './ProductCardModal.svelte';
+	export let sizes: string[];
+	export let colors: string[];
 
 	let showModal = false;
 
@@ -50,7 +53,7 @@
 	<button class="product-card-button" on:click={() => (showModal = true)}>В КОРЗИНУ</button>
 </div>
 
-<ProductCardModal bind:showModal {name} {price} />
+<ProductCardModal bind:showModal {name} {price} {category} {sizes} {colors} />
 
 <style>
 	@import './ProductCard.css';
