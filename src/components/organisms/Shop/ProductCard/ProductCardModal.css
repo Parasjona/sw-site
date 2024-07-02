@@ -2,12 +2,16 @@
 
 .modal-wrapper {
 	box-sizing: border-box;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	justify-content: space-evenly;
 }
 .modal-header {
 	font-size: 30px;
+	@media (max-width: 640px) {
+		font-size: 22px;
+	}
 }
 .modal-line-wrapper {
 	display: flex;
@@ -24,20 +28,33 @@
 .modal-price {
 	font-size: 35px;
 	flex-grow: 1;
+	@media (max-width: 640px) {
+		font-size: 23px;
+	}
 }
 .modal-button {
 	width: 290px;
 	height: 62px;
 	font-size: 25px;
 	flex-shrink: 0;
+	@media (max-width: 640px) {
+		font-size: 17px;
+    width: 60%;
+	}
 }
 .modal-text {
 	font-size: 28px;
+	@media (max-width: 640px) {
+		font-size: 18px;
+	}
 }
 .modal-quantity-text {
 	font-size: 28px;
 	width: 28px;
 	text-align: center;
+	@media (max-width: 640px) {
+		font-size: 17px;
+	}
 }
 .modal-quantity-block {
 	display: flex;
@@ -53,4 +70,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: var(--button-base-grey);
+	@media (max-width: 640px) {
+		font-size: 17px;
+	}
 }

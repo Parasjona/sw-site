@@ -3,6 +3,7 @@
 	import { cartQuantity } from '@components/store/cartQuantity';
 	import { cart } from '@components/store/cart';
 	import Switcher from '@components/atoms/Switcher/Switcher.svelte';
+	import SwitcherButton from '@components/atoms/Switcher/SwitcherButton.svelte';
 
 	export let showModal = false;
 	export let name: string;
@@ -11,17 +12,16 @@
 	export let sizes: string[] = ['one size'];
 	export let colors: string[] = ['one color'];
 
-	const getSizeOptions = (sizes: string[]): { name: string; color: string }[] => {
-		return sizes.map((sizeName) => ({ name: sizeName, color: '' }));
-	};
-	const getColorOptions = (colors: string[]): { name: string; color: string }[] => {
-		if (colors[0] === 'one color') return [{ name: 'one color', color: '' }];
-		return colors.map((colorName) => ({ name: '', color: colorName }));
-	};
-
 	let quantity: number = 1;
-	let size: string = sizes[0];
-	let color: string = colors[0];
+	let currentSize: string = sizes[0];
+	let currentColor: string = colors[0];
+
+	const handleSizeClick = (size: string) => {
+		currentSize = size;
+	};
+	const handleColorClick = (color: string) => {
+		currentColor = color;
+	};
 
 	const handleIncrement = () => {
 		const newValue = quantity === 9 ? 9 : quantity + 1;
@@ -41,8 +41,8 @@
 					category: category,
 					price: price,
 					quantity: quantity,
-					color: color,
-					size: size
+					color: currentColor,
+					size: currentSize
 				}
 			];
 		});
@@ -61,8 +61,25 @@
 			</div>
 		</div>
 		<div class="modal-switcher-line-wrapper">
-			<Switcher label="Размер" currentOption={size} options={getSizeOptions(sizes)} />
-			<Switcher label="Цвет" currentOption={color} options={getColorOptions(colors)} />
+			<Switcher label="Размер ">
+				{#each sizes as sizeName}
+					<SwitcherButton
+						on:click={() => handleSizeClick(sizeName)}
+						text={sizeName}
+						aria-current={sizeName === currentSize}
+					/>
+				{/each}
+			</Switcher>
+			<Switcher label="Цвет">
+				{#each colors as colorName}
+					<SwitcherButton
+						on:click={() => handleColorClick(colorName)}
+						text={colorName === 'one color' ? colorName : ''}
+						color={colorName}
+						aria-current={colorName === currentColor}
+					/>
+				{/each}
+			</Switcher>
 		</div>
 		<div class="modal-line-wrapper">
 			<div class="modal-price">{price}</div>

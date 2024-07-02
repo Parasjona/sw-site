@@ -15,7 +15,7 @@
 		display: flex;
 		width: 100%;
 
-		@media (max-width: 700px) {
+		@media (max-width: 640px) {
 			font-size: 15px;
 		}
 	}

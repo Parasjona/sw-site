@@ -38,12 +38,18 @@
 		border: none;
 		padding: 0;
 		cursor: default;
+
+		@media (max-width: 640px) {
+			width: 90%;
+		}
 	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.8);
 	}
 	dialog > div {
+		box-sizing: border-box;
 		padding: 20px;
+		height: 100%;
 	}
 	dialog[open] {
 		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);

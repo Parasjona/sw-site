@@ -7,12 +7,13 @@
 	export let category: string = 'Snake Way Division';
 	export let price: string;
 	export let photo: string[] = [''];
-	export let sizes: string[];
-	export let colors: string[];
+	export let sizes: string[] = undefined;
+	export let colors: string[] = undefined;
 
 	let showModal = false;
 
 	const CARD_WIDTH = 293;
+
 	const createSrcUrl = (photo: string) => {
 		if (photo === '') return undefined;
 		return `${base}/images/products/${photo}`;

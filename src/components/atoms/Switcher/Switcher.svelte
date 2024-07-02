@@ -1,21 +1,11 @@
 <script lang="ts">
-	import SwitcherButton from './SwitcherButton.svelte';
-
 	export let label: string = '';
-	export let currentOption: string = '';
-	export let options: { name: string; color: string }[] = [{ name: '', color: '' }];
-
-	function isCurrent(item: { name: string; color: string }) {
-		return !currentOption || currentOption === item.name || currentOption === item.color;
-	}
 </script>
 
 <div class="wrapper">
 	<div class="label">{label}</div>
 	<div class="options">
-		{#each options as item}
-			<SwitcherButton text={item.name} aria-current={isCurrent(item)} />
-		{/each}
+		<slot />
 	</div>
 </div>
 
@@ -27,8 +17,12 @@
 	}
 	.label {
 		font-size: 28px;
+		@media (max-width: 640px) {
+			font-size: 22px;
+		}
 	}
 	.options {
 		display: flex;
+		gap: 10px;
 	}
 </style>

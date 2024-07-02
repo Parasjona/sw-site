@@ -2,7 +2,7 @@
 	export let text: string = '';
 	export let color: string = '';
 
-	$: style = `background-color: var(--${color})`;
+	$: style = !!color && color !== 'one size' ? `background-color: var(--${color})` : '';
 </script>
 
 <button on:click {style} {...$$restProps}>{text}</button>
@@ -20,12 +20,15 @@
 
 		min-width: 24px;
 		min-height: 24px;
-		border: 3px solid transparent;
+		border: 3px solid white;
 		font-size: 23px;
 
 		&:hover {
 			border-color: var(--button-press-grey);
 			background-color: var(--button-hover-grey);
+		}
+		@media (max-width: 640px) {
+			font-size: 17px;
 		}
 	}
 	button[aria-current='true'] {

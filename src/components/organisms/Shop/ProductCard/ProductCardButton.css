@@ -8,6 +8,8 @@ button {
 	-ms-user-select: none;
 	user-select: none;
 
+	background-color: var(--button-base-grey);
+
 	&:hover {
 		box-shadow: var(--hover-shadow);
 		background-color: var(--button-hover-grey);
