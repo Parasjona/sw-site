@@ -7,7 +7,7 @@
 
 <li class="breadcrumb">
 	{#if isActive}
-		<a class="content" href={url}>
+		<a class="content active" href={url}>
 			<slot />
 			<ChevronRight />
 		</a>
@@ -31,5 +31,12 @@
 		text-decoration: none;
 		position: relative;
 		color: black;
+		cursor: default;
+	}
+	.active {
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 </style>
