@@ -9,7 +9,7 @@
 <style>
 	.breadcrumbs {
 		font-family: 'Century Gothic';
-		font-size: 30px;
+		font-size: 20px;
 		position: relative;
 		box-sizing: border-box;
 		display: flex;
