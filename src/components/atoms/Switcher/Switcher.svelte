@@ -24,5 +24,8 @@
 	.options {
 		display: flex;
 		gap: 10px;
+		@media (max-width: 640px) {
+			gap: 5px;
+		}
 	}
 </style>
