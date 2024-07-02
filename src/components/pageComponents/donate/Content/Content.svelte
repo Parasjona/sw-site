@@ -29,14 +29,14 @@
 	.header-text {
 		margin-bottom: 20px;
 		font-size: 35px;
-		@media (max-width: 700px) {
+		@media (max-width: 640px) {
 			font-size: 20px;
 		}
 	}
 	.sub-header-text {
 		margin-bottom: 20px;
 		font-size: 30px;
-		@media (max-width: 700px) {
+		@media (max-width: 640px) {
 			font-size: 15px;
 		}
 	}
@@ -44,7 +44,7 @@
 		margin-top: 20px;
 		font-family: 'Century Gothic Bold';
 		font-size: 20px;
-		@media (max-width: 700px) {
+		@media (max-width: 640px) {
 			font-size: 13px;
 		}
 	}
@@ -60,7 +60,7 @@
 		&:hover {
 			background-color: rgb(145, 145, 145);
 		}
-		@media (max-width: 700px) {
+		@media (max-width: 640px) {
 			width: 90%;
 			font-size: 13px;
 			border-width: 10px;

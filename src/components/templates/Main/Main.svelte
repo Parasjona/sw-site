@@ -12,7 +12,7 @@
 		overflow: auto;
 		padding: 0 40px;
 
-		@media (max-width: 700px) {
+		@media (max-width: 640px) {
 			padding: 0 20px;
 		}
 	}
