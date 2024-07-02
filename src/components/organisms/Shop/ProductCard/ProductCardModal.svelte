@@ -4,6 +4,7 @@
 	import { cart } from '@components/store/cart';
 	import Switcher from '@components/atoms/Switcher/Switcher.svelte';
 	import SwitcherButton from '@components/atoms/Switcher/SwitcherButton.svelte';
+	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';
 
 	export let showModal = false;
 	export let name: string;
@@ -55,9 +56,9 @@
 		<div class="modal-line-wrapper">
 			<div class="modal-text">Количество</div>
 			<div class="modal-quantity-block">
-				<button class="modal-quantity-button" on:click={handleDecrement}>&minus;</button>
+				<ButtonQuantityChange on:click={handleDecrement}>&minus;</ButtonQuantityChange>
 				<div class="modal-quantity-text">{quantity}</div>
-				<button class="modal-quantity-button" on:click={handleIncrement}>+</button>
+				<ButtonQuantityChange on:click={handleIncrement}>+</ButtonQuantityChange>
 			</div>
 		</div>
 		<div class="modal-switcher-line-wrapper">
