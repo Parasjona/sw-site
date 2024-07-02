@@ -18,9 +18,11 @@
 			<ShopingCart />
 		</div>
 		<div class="badge-wrapper">
-			<Badge>
-				{$cartQuantity}
-			</Badge>
+			<a href="/sw-site/shop/cart">
+				<Badge>
+					{$cartQuantity}
+				</Badge>
+			</a>
 		</div>
 	</div>
 </HeaderBlock>
