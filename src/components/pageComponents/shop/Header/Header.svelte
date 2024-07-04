@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base as BASE_URL } from '$app/paths';
 	import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
 	import { HeaderBlock } from '@components/templates/HeaderBlock';
 	import { Badge } from '@components/atoms/Badge';
@@ -18,7 +19,7 @@
 			<ShopingCart />
 		</div>
 		<div class="badge-wrapper">
-			<a href="/sw-site/shop/cart">
+			<a href="{BASE_URL}/shop/cart">
 				<Badge>
 					{$cartQuantity}
 				</Badge>

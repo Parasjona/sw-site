@@ -1,9 +1,10 @@
 <script>
 	import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
 	import { HeaderBlock } from '@components/templates/HeaderBlock';
+	import { base as BASE_URL } from '$app/paths';
 
-	const homeUrl = '.\\.\\';
-	const shopUrl = '.\\';
+	const homeUrl = BASE_URL;
+	const shopUrl = `${BASE_URL}/shop`;
 </script>
 
 <HeaderBlock>

@@ -2,6 +2,7 @@
 	import { IconLinkButton } from '../../../atoms/IconLinkButton';
 	import { LinkButton } from '../../../atoms/LinkButton';
 	import { InstLogo, MbLogo, T13Logo, TgLogo, VkLogo } from './icons/index';
+	import { base as BASE_URL } from '$app/paths';
 	import Cover from './icons/logo.svg';
 </script>
 
@@ -28,8 +29,8 @@
 		</IconLinkButton>
 	</div>
 	<div class="buttons-wrapper">
-		<LinkButton href="/sw-site/shop">Shop</LinkButton>
-		<LinkButton href="/sw-site/donate">Donate</LinkButton>
+		<LinkButton href="{BASE_URL}/shop">Shop</LinkButton>
+		<LinkButton href="{BASE_URL}/donate">Donate</LinkButton>
 	</div>
 </div>
 
