@@ -14,6 +14,3 @@
 		<BreadcrumbItem>Корзина</BreadcrumbItem>
 	</Breadcrumbs>
 </HeaderBlock>
-
-<style>
-</style>
