@@ -1,6 +1,14 @@
 <script>
 	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';
-	let quantity = 2;
+	export let quantity = 2;
+	export let name = 'Футболка';
+	export let category = 'Snake Way Division';
+	export let color = 'красная';
+	export let size = 'M';
+	export let price = 3000;
+
+	let item = `${name} ${category} ${color} ${size}`;
+	let totalSumm = `${price * quantity}р.`;
 
 	const handleIncrement = () => {
 		const newValue = quantity === 9 ? 9 : quantity + 1;
@@ -14,13 +22,13 @@
 
 <div class="wrapper">
 	<div class="photo-block"></div>
-	<div class="text-block">Футболка "Snake Way Division" красная М</div>
+	<div class="text-block">{item}</div>
 	<div class="quantity-block">
 		<ButtonQuantityChange on:click={handleDecrement}>&minus;</ButtonQuantityChange>
 		<div class="quantity-text">{quantity}</div>
 		<ButtonQuantityChange on:click={handleIncrement}>+</ButtonQuantityChange>
 	</div>
-	<div class="price-block">6000р.</div>
+	<div class="price-block">{totalSumm}</div>
 </div>
 
 <style>
