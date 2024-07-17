@@ -16,6 +16,9 @@
 	align-items: center;
 	justify-content: center;
 }
+.product-card-photo {
+	height: 210px;
+}
 .product-card-photo-block-slideline-zone {
 	position: absolute;
 	bottom: 0;

@@ -34,7 +34,7 @@
 <div class="product-card">
 	<div class="product-card-photo-block">
 		{#if srcUrl}
-			<img class="avatar" src={srcUrl} alt={name} />
+			<img class="product-card-photo" src={srcUrl} alt={name} />
 			<div class="product-card-photo-block-slideline-zone">
 				{#each Array(imgNumber) as _, index (index)}
 					<Slider
