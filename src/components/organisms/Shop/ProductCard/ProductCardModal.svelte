@@ -9,9 +9,10 @@
 	export let showModal = false;
 	export let name: string;
 	export let category: string = 'Snake Way Division';
-	export let price: string;
+	export let price: number;
 	export let sizes: string[] = ['one size'];
 	export let colors: string[] = ['one color'];
+	export let photo: string;
 
 	let quantity: number = 1;
 	let currentSize: string = sizes[0];
@@ -43,7 +44,8 @@
 					price: price,
 					quantity: quantity,
 					color: currentColor,
-					size: currentSize
+					size: currentSize,
+					photo: photo
 				}
 			];
 		});

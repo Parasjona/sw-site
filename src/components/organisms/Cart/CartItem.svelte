@@ -1,14 +1,18 @@
 <script>
 	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';
+	import { createProductImgSrcUrl } from '../../utils';
+
 	export let quantity = 2;
 	export let name = 'Футболка';
 	export let category = 'Snake Way Division';
 	export let color = 'красная';
 	export let size = 'M';
 	export let price = 3000;
+	export let photo = '';
 
 	let item = `${name} ${category} ${color} ${size}`;
 	let totalSumm = `${price * quantity}р.`;
+	let srcUrl = createProductImgSrcUrl(photo);
 
 	const handleIncrement = () => {
 		const newValue = quantity === 9 ? 9 : quantity + 1;
@@ -21,13 +25,16 @@
 </script>
 
 <div class="wrapper">
-	<div class="photo-block"></div>
+	<div class="photo-block">
+		<img class="product-photo" src={srcUrl} alt={name} />
+	</div>
 	<div class="text-block">{item}</div>
 	<div class="quantity-block">
 		<ButtonQuantityChange on:click={handleDecrement}>&minus;</ButtonQuantityChange>
 		<div class="quantity-text">{quantity}</div>
 		<ButtonQuantityChange on:click={handleIncrement}>+</ButtonQuantityChange>
 	</div>
+
 	<div class="price-block">{totalSumm}</div>
 </div>
 
@@ -40,8 +47,14 @@
 	}
 	.photo-block {
 		width: 296px;
-		height: 215px;
+		height: 197px;
 		background-color: red;
+		overflow: hidden;
+		text-align: center;
+		flex-shrink: 0;
+	}
+	.product-photo {
+		width: 296px;
 	}
 	.text-block {
 		font-size: 20px;

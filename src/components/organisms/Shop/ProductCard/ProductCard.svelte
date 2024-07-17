@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import Slider from './Slider.svelte';
 	import ProductCardModal from './ProductCardModal.svelte';
+	import { createProductImgSrcUrl } from '../../../utils';
 
 	export let name: string;
 	export let category: string = 'Snake Way Division';
-	export let price: string;
+	export let price: number;
 	export let photo: string[] = [''];
 	export let sizes: string[] = undefined;
 	export let colors: string[] = undefined;
@@ -14,20 +14,15 @@
 
 	const CARD_WIDTH = 293;
 
-	const createSrcUrl = (photo: string) => {
-		if (photo === '') return undefined;
-		return `${base}/images/products/${photo}`;
-	};
-
 	let imgIndex = 0;
 	let imgNumber = photo ? photo.length : 0;
 	let sliderWidth = imgNumber > 1 ? CARD_WIDTH / imgNumber : 0;
 
-	let srcUrl = createSrcUrl(photo[imgIndex]);
+	let srcUrl = createProductImgSrcUrl(photo[imgIndex]);
 
 	const handleMouseEnter = (index: number) => {
 		imgIndex = index;
-		srcUrl = createSrcUrl(photo[imgIndex]);
+		srcUrl = createProductImgSrcUrl(photo[imgIndex]);
 	};
 </script>
 
@@ -50,11 +45,11 @@
 	</div>
 	<div class="product-card-text">{name}</div>
 	<div class="product-card-text">{category}</div>
-	<div class="product-card-text">{price}</div>
+	<div class="product-card-text">{price}р.</div>
 	<button class="product-card-button" on:click={() => (showModal = true)}>В КОРЗИНУ</button>
 </div>
 
-<ProductCardModal bind:showModal {name} {price} {category} {sizes} {colors} />
+<ProductCardModal bind:showModal {name} {price} {category} {sizes} {colors} photo={photo[0]} />
 
 <style>
 	@import './ProductCard.css';
