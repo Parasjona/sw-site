@@ -1,10 +1,14 @@
 <script>
 	import CartItem from '@components/organisms/Cart/CartItem.svelte';
+	import { cart } from '../../../store/cart';
 </script>
 
 <div class="wrapper">
 	<div class="header-text">Покупаю:</div>
-	<CartItem />
+	{#each $cart as item}
+		<CartItem {...item} />
+	{/each}
+
 	<div class="divider"></div>
 	<div class="total-text">Итого:</div>
 	<div class="total-summ-text">6000р.</div>

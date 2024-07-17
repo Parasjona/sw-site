@@ -1,3 +1,3 @@
-import { writable } from 'svelte/store';
+import { persisted } from 'svelte-local-storage-store';
 
-export const cartQuantity = writable(0);
+export const cartQuantity = persisted('cartQuantity', 0);
