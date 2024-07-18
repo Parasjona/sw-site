@@ -1,6 +1,6 @@
 <script>
-	import { IconLinkButton } from '../../../atoms/IconLinkButton';
-	import { LinkButton } from '../../../atoms/LinkButton';
+	import { IconLinkButton } from '@components/atoms/IconLinkButton';
+	import { LinkButton } from '@components/atoms/LinkButton';
 	import { InstLogo, MbLogo, T13Logo, TgLogo, VkLogo } from './icons/index';
 	import { base as BASE_URL } from '$app/paths';
 	import Cover from './icons/logo.svg';

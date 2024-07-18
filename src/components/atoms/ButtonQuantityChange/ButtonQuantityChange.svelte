@@ -5,7 +5,7 @@
 </button>
 
 <style>
-	@import '../../organisms/Shop/ProductCard/ProductCardButton.css';
+	@import '@components/organisms/Shop/ProductCard/ProductCardButton.css';
 	.modal-quantity-button {
 		width: 28px;
 		height: 28px;

@@ -4,7 +4,7 @@
 	import { HeaderBlock } from '@components/templates/HeaderBlock';
 	import { Badge } from '@components/atoms/Badge';
 	import ShopingCart from './icons/shopingCart.svelte';
-	import { cartQuantity } from '@components/store/cartQuantity';
+	import { cartQuantity } from '@store/cartQuantity';
 
 	const homeUrl = '.\\';
 </script>

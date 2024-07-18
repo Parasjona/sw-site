@@ -1,6 +1,7 @@
 <script>
 	import CartItem from '@components/organisms/Cart/CartItem.svelte';
-	import { cart } from '../../../store/cart';
+	import { cart } from '@store/cart';
+
 </script>
 
 <div class="wrapper">
@@ -16,7 +17,7 @@
 </div>
 
 <style>
-	@import '../../../organisms/Shop/ProductCard/ProductCardButton.css';
+	@import '@components/organisms/Shop/ProductCard/ProductCardButton.css';
 	.wrapper {
 		text-align: center;
 		padding: 10px 0;

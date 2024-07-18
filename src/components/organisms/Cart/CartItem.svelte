@@ -1,6 +1,6 @@
 <script>
 	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';
-	import { createProductImgSrcUrl } from '../../utils';
+	import { createProductImgSrcUrl } from '@components/utils';
 
 	export let quantity = 2;
 	export let name = 'Футболка';

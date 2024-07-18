@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Modal } from '../../../molecules/Modal';
-	import { cartQuantity } from '@components/store/cartQuantity';
-	import { cart } from '@components/store/cart';
+	import { Modal } from '@components/molecules/Modal';
+	import { cartQuantity } from '@store/cartQuantity';
+	import { cart } from '@store/cart';
 	import Switcher from '@components/atoms/Switcher/Switcher.svelte';
 	import SwitcherButton from '@components/atoms/Switcher/SwitcherButton.svelte';
 	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';

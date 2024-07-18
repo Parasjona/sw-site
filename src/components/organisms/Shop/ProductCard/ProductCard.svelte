@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Slider from './Slider.svelte';
 	import ProductCardModal from './ProductCardModal.svelte';
-	import { createProductImgSrcUrl } from '../../../utils';
+	import { createProductImgSrcUrl } from '@components/utils';
 
 	export let name: string;
 	export let category: string = 'Snake Way Division';

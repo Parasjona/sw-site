@@ -1,6 +1,6 @@
 <script>
-	import { Content, Header } from '../../../components/pageComponents/cart';
-	import { Main } from '../../../components/templates/Main';
+	import { Content, Header } from '@components/pageComponents/cart';
+	import { Main } from '@components/templates/Main';
 </script>
 
 <Main>
