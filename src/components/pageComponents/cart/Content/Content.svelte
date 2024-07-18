@@ -2,6 +2,9 @@
 	import CartItem from '@components/organisms/Cart/CartItem.svelte';
 	import { cart } from '@store/cart';
 
+	let totalSumm = $cart.reduce((acc, item) => {
+		return acc + item.quantity * item.price;
+	}, 0);
 </script>
 
 <div class="wrapper">
@@ -12,7 +15,7 @@
 
 	<div class="divider"></div>
 	<div class="total-text">Итого:</div>
-	<div class="total-summ-text">6000р.</div>
+	<div class="total-summ-text">{totalSumm}р.</div>
 	<button class="cart-button">Оформить заказ через Телеграм</button>
 </div>
 
