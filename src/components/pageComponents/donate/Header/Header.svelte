@@ -11,6 +11,3 @@
 		<BreadcrumbItem>Donate</BreadcrumbItem>
 	</Breadcrumbs>
 </HeaderBlock>
-
-<style>
-</style>
