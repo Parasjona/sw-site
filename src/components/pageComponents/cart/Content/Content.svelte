@@ -1,22 +1,33 @@
 <script>
 	import CartItem from '@components/organisms/Cart/CartItem.svelte';
 	import { cart } from '@store/cart';
+	import { cartQuantity } from '@store/cartQuantity';
 
 	let totalSumm = $cart.reduce((acc, item) => {
 		return acc + item.quantity * item.price;
 	}, 0);
+	function clearCart() {
+		cartQuantity.update(() => 0);
+		cart.update(() => []);
+    totalSumm = 0;
+	}
 </script>
 
 <div class="wrapper">
-	<div class="header-text">Покупаю:</div>
-	{#each $cart as item}
-		<CartItem {...item} />
-	{/each}
+  {#if totalSumm === 0}
+    <div class="header-text">К сожалению Ваша корзина пуста</div>
+  {:else}
+    <div class="header-text">Покупаю:</div>
+    {#each $cart as item}
+      <CartItem {...item} />
+    {/each}
 
-	<div class="divider"></div>
-	<div class="total-text">Итого:</div>
-	<div class="total-summ-text">{totalSumm}р.</div>
-	<button class="cart-button">Оформить заказ через Телеграм</button>
+    <div class="divider"></div>
+    <div class="total-text">Итого:</div>
+    <div class="total-summ-text">{totalSumm}р.</div>
+    <button class="cart-button">Оформить заказ через Телеграм</button>
+    <button class="cart-button" on:click={() => clearCart()}>Очистить корзину</button>
+  {/if}
 </div>
 
 <style>
