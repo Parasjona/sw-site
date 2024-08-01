@@ -1,26 +1,47 @@
 <script>
 	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';
 	import { createProductImgSrcUrl } from '@components/utils';
+	import { cartQuantity } from '@store/cartQuantity';
+	import { cart } from '@store/cart';
 
-	export let quantity = 2;
-	export let name = 'Футболка';
-	export let category = 'Snake Way Division';
-	export let color = 'красная';
-	export let size = 'M';
-	export let price = 3000;
+	export let quantity;
+	export let itemId;
+	export let article;
+	export let name;
+	export let category;
+	export let color;
+	export let size;
+	export let price;
 	export let photo = '';
 
 	let item = `${name} ${category} ${color} ${size}`;
-	let totalSumm = `${price * quantity}р.`;
 	let srcUrl = createProductImgSrcUrl(photo);
+	$: totalSumm = `${price * quantity}р.`;
 
+	function updateCart(itemId, newQuantity) {
+		const itemQuantity = $cart.find((cartItem) => cartItem.itemId === itemId).quantity;
+		const delta = newQuantity - itemQuantity;
+
+		const newItems = $cart.map((item) => {
+			if (item.itemId !== itemId) {
+				return item;
+			}
+			let newItem = item;
+			newItem.quantity = newQuantity;
+			return newItem;
+		});
+		cartQuantity.update((n) => n + delta);
+		cart.update(() => newItems);
+	}
 	const handleIncrement = () => {
 		const newValue = quantity === 9 ? 9 : quantity + 1;
 		quantity = newValue;
+		updateCart(itemId, newValue);
 	};
 	const handleDecrement = () => {
 		const newValue = quantity === 0 ? 0 : quantity - 1;
 		quantity = newValue;
+		updateCart(itemId, newValue);
 	};
 </script>
 

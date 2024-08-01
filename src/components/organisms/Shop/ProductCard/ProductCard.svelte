@@ -3,6 +3,7 @@
 	import ProductCardModal from './ProductCardModal.svelte';
 	import { createProductImgSrcUrl } from '@components/utils';
 
+	export let article: string;
 	export let name: string;
 	export let category: string = 'Snake Way Division';
 	export let price: number;
@@ -49,7 +50,16 @@
 	<button class="product-card-button" on:click={() => (showModal = true)}>В КОРЗИНУ</button>
 </div>
 
-<ProductCardModal bind:showModal {name} {price} {category} {sizes} {colors} photo={photo[0]} />
+<ProductCardModal
+	bind:showModal
+	{article}
+	{name}
+	{price}
+	{category}
+	{sizes}
+	{colors}
+	photo={photo[0]}
+/>
 
 <style>
 	@import './ProductCard.css';

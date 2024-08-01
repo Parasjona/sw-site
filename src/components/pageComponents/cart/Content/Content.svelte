@@ -3,7 +3,7 @@
 	import { cart } from '@store/cart';
 	import { cartQuantity } from '@store/cartQuantity';
 
-	let totalSumm = $cart.reduce((acc, item) => {
+	$: totalSumm = $cart.reduce((acc, item) => {
 		return acc + item.quantity * item.price;
 	}, 0);
 	function clearCart() {

@@ -5,8 +5,10 @@
 	import Switcher from '@components/atoms/Switcher/Switcher.svelte';
 	import SwitcherButton from '@components/atoms/Switcher/SwitcherButton.svelte';
 	import { ButtonQuantityChange } from '@components/atoms/ButtonQuantityChange';
+	import { stringHash } from '@components/utils';
 
 	export let showModal = false;
+	export let article: string;
 	export let name: string;
 	export let category: string = 'Snake Way Division';
 	export let price: number;
@@ -34,11 +36,14 @@
 		quantity = newValue;
 	};
 	function addToCart() {
+		const itemId = stringHash(`${article}${name}${category}${currentColor}${currentSize}`);
 		cartQuantity.update((n) => n + quantity);
 		cart.update((items) => {
 			return [
 				...items,
 				{
+					itemId: itemId,
+					article: article,
 					name: name,
 					category: category,
 					price: price,
