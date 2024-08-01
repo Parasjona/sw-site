@@ -39,9 +39,18 @@
 		const itemId = stringHash(`${article}${name}${category}${currentColor}${currentSize}`);
 		cartQuantity.update((n) => n + quantity);
 		cart.update((items) => {
-			return [
-				...items,
-				{
+			let isNewItem = true;
+			let newItems = items.map((item) => {
+				if (item.itemId === itemId) {
+					let newItem = item;
+					newItem.quantity = item.quantity + quantity;
+					isNewItem = false;
+					return newItem;
+				}
+				return item;
+			});
+			if (isNewItem) {
+				newItems.push({
 					itemId: itemId,
 					article: article,
 					name: name,
@@ -51,8 +60,9 @@
 					color: currentColor,
 					size: currentSize,
 					photo: photo
-				}
-			];
+				});
+			}
+			return newItems;
 		});
 	}
 </script>
