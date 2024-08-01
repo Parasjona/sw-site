@@ -77,6 +77,9 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
+		@media (max-width: 640px) {
+			flex-direction: column;
+		}
 	}
 	.photo-block {
 		width: 296px;
