@@ -5,10 +5,18 @@
 <div class="wrapper">
 	<div class="header-text">Поддержать проект можно рублем</div>
 	<div class="sub-header-text">СБП "Сбербанк"<br />Роман Сергеевич М.</div>
-	<div class="copy-text" use:copy={'+79119998933'} on:svelte-copy={() => alert("Номер телефона скопирован")}>
+	<div
+		class="copy-text"
+		use:copy={'+79119998933'}
+		on:svelte-copy={() => alert('Номер телефона скопирован')}
+	>
 		+7 911 999 89 33<br />скопировать номер телефона
 	</div>
-	<div class="copy-text" use:copy={'2202206314670147'} on:svelte-copy={() => alert("Номер карты скопирован")}>
+	<div
+		class="copy-text"
+		use:copy={'2202206314670147'}
+		on:svelte-copy={() => alert('Номер карты скопирован')}
+	>
 		2202206314670147<br />скопировать номер карты
 	</div>
 	<div class="comment-text">
