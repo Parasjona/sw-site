@@ -100,7 +100,7 @@
 			</Switcher>
 		</div>
 		<div class="modal-line-wrapper">
-			<div class="modal-price">{price}</div>
+			<div class="modal-price">{price}р.</div>
 			<button class="modal-button" on:click={() => addToCart()}>Добавить в корзину</button>
 		</div>
 	</div>
