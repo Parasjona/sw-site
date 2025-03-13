@@ -11,6 +11,17 @@
 		cart.update(() => []);
 		totalSumm = 0;
 	}
+  function cartToMessage() {
+     return $cart.reduce((acc, item) => {
+      return acc + `%0AАрт.${item.article} ${item.name}: ${item.quantity}шт. на ${item.quantity * item.price}р.`;
+    }, '');
+  }
+
+  function sendOrder(tgUser) {
+    const message = `Добрый день!%0AПрошу оформить заказ:${cartToMessage()}%0AИтого: ${totalSumm}р.`;
+    const link = `https://t.me/${tgUser}?text=${message}`;
+    window.open(link, '_blank');
+  }
 </script>
 
 <div class="wrapper">
@@ -25,7 +36,7 @@
 		<div class="divider"></div>
 		<div class="total-text">Итого:</div>
 		<div class="total-summ-text">{totalSumm}р.</div>
-		<button class="cart-button">Оформить заказ через Телеграм</button>
+		<button class="cart-button" on:click={() => sendOrder('mnstrstvo')}>Оформить заказ через Телеграм</button>
 		<button class="cart-button" on:click={() => clearCart()}>Очистить корзину</button>
 	{/if}
 </div>
