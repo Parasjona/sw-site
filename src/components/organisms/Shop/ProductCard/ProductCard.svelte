@@ -1,5 +1,6 @@
 <script lang="ts">
   import Slider from './Slider.svelte';
+  import ArrowButton from './ArrowButton.svelte';
   import ProductCardModal from './ProductCardModal.svelte';
   import { createProductImgSrcUrl } from '@components/utils';
 
@@ -25,6 +26,22 @@
     imgIndex = index;
     srcUrl = createProductImgSrcUrl(photo[imgIndex]);
   };
+  const handlePrevClick = () => {
+    if (imgIndex > 0) {
+      imgIndex = imgIndex - 1;
+    } else {
+      imgIndex = imgNumber - 1;
+    }
+    srcUrl = createProductImgSrcUrl(photo[imgIndex]);
+  };
+  const handleNextClick = () => {
+    if (imgIndex < imgNumber - 1) {
+      imgIndex = imgIndex + 1;
+    } else {
+      imgIndex = 0;
+    }
+    srcUrl = createProductImgSrcUrl(photo[imgIndex]);
+  };
 </script>
 
 <div class="product-card">
@@ -40,6 +57,10 @@
           />
         {/each}
       </div>
+      {#if imgNumber > 1}
+        <ArrowButton direction="left" on:click={(e) => handlePrevClick()} />
+        <ArrowButton direction="right" on:click={(e) => handleNextClick()} />
+      {/if}
     {:else}
       <div class="product-card-text">Товар на фотосессии</div>
     {/if}
