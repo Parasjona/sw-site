@@ -12,8 +12,11 @@
     totalSumm = 0;
   }
   function cartToMessage() {
-     return $cart.reduce((acc, item) => {
-      return acc + `%0AАрт.${item.article} ${item.name}: ${item.quantity}шт. на ${item.quantity * item.price}р.`;
+    return $cart.reduce((acc, item) => {
+      return (
+        acc +
+        `%0AАрт.${item.article} ${item.name}: ${item.quantity}шт. на ${item.quantity * item.price}р.`
+      );
     }, '');
   }
 
@@ -36,7 +39,9 @@
     <div class="divider"></div>
     <div class="total-text">Итого:</div>
     <div class="total-summ-text">{totalSumm}р.</div>
-    <button class="cart-button" on:click={() => sendOrder('mnstrstvo')}>Оформить заказ через Телеграм</button>
+    <button class="cart-button" on:click={() => sendOrder('mnstrstvo')}
+      >Оформить заказ через Телеграм</button
+    >
     <button class="cart-button" on:click={() => clearCart()}>Очистить корзину</button>
   {/if}
 </div>

@@ -1,22 +1,22 @@
 button {
-	all: unset;
-	cursor: pointer;
-	box-sizing: border-box;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-	background-color: var(--button-base-grey);
+  background-color: var(--button-base-grey);
 
-	&:hover {
-		box-shadow: var(--hover-shadow);
-		background-color: var(--button-hover-grey);
-	}
+  &:hover {
+    box-shadow: var(--hover-shadow);
+    background-color: var(--button-hover-grey);
+  }
 
-	&:active {
-		background-color: var(--button-press-grey);
-		box-shadow: none;
-	}
+  &:active {
+    background-color: var(--button-press-grey);
+    box-shadow: none;
+  }
 }

@@ -1,41 +1,41 @@
 @font-face {
-	font-family: Texas Tango;
-	src: url('fonts/TEXAT BOLD PERSONAL USE___.otf') format('opentype');
-	font-weight: bold;
-	font-style: normal;
+  font-family: Texas Tango;
+  src: url('fonts/TEXAT BOLD PERSONAL USE___.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-	font-family: Century Gothic;
-	src: url('fonts/centurygothic.ttf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: Century Gothic;
+  src: url('fonts/centurygothic.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: Century Gothic Bold;
-	src: url('fonts/centurygothic_bold.ttf') format('opentype');
-	font-weight: bold;
-	font-style: normal;
+  font-family: Century Gothic Bold;
+  src: url('fonts/centurygothic_bold.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 :root {
-	--black: rgb(0, 0, 0);
-	--red: rgb(204, 0, 0);
-	--yellow: rgb(243, 219, 9);
-	--dark-yellow: rgb(204, 153, 0);
-	--light-grey: rgb(230, 230, 230);
-	--button-base-grey: rgb(204, 204, 204);
-	--button-hover-grey: rgb(179, 179, 179);
-	--button-press-grey: rgb(153, 153, 153);
+  --black: rgb(0, 0, 0);
+  --red: rgb(204, 0, 0);
+  --yellow: rgb(243, 219, 9);
+  --dark-yellow: rgb(204, 153, 0);
+  --light-grey: rgb(230, 230, 230);
+  --button-base-grey: rgb(204, 204, 204);
+  --button-hover-grey: rgb(179, 179, 179);
+  --button-press-grey: rgb(153, 153, 153);
 
-	--link-button-shadow:
-		0px 0px 0px 3px rgb(204, 153, 0) inset, 0px 0px 0px -3px rgb(204, 153, 0) inset;
-	--hover-shadow: 0px 0px 10px 0px black;
-	--active-shadow: 0px 0px 10px 0px red;
+  --link-button-shadow:
+    0px 0px 0px 3px rgb(204, 153, 0) inset, 0px 0px 0px -3px rgb(204, 153, 0) inset;
+  --hover-shadow: 0px 0px 10px 0px black;
+  --active-shadow: 0px 0px 10px 0px red;
 
-	--link-button-border: 3px solid black;
-	--link-button-border-radius: 17px;
+  --link-button-border: 3px solid black;
+  --link-button-border-radius: 17px;
 }

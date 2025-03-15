@@ -18,7 +18,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     gap: 10px;
     font-family: 'Century Gothic';
   }
