@@ -1,13 +1,13 @@
 <script>
-	import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
-	import { HeaderBlock } from '@components/templates/HeaderBlock';
+  import { Breadcrumbs, BreadcrumbItem } from '@components/molecules/Breadcrumbs';
+  import { HeaderBlock } from '@components/templates/HeaderBlock';
 
-	const homeUrl = '.\\';
+  const homeUrl = '.\\';
 </script>
 
 <HeaderBlock>
-	<Breadcrumbs>
-		<BreadcrumbItem isActive url={homeUrl}>Главная</BreadcrumbItem>
-		<BreadcrumbItem>Donate</BreadcrumbItem>
-	</Breadcrumbs>
+  <Breadcrumbs>
+    <BreadcrumbItem isActive url={homeUrl}>Главная</BreadcrumbItem>
+    <BreadcrumbItem>Donate</BreadcrumbItem>
+  </Breadcrumbs>
 </HeaderBlock>
