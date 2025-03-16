@@ -47,7 +47,15 @@
       category: 'Snake Way Division',
       price: 1300,
       photo: ['flag1.jpg', 'flag2.jpg', 'flag3.jpg']
-    }
+    },
+    {
+      article: '005',
+      name: 'Кепка',
+      category: 'Snake Way Division',
+      price: 1900,
+      colors: ['black-green', 'black-white', 'grey-green', 'grey-white', 'white-green', 'white-white'],
+      colorTooltips: ['Черная+зеленый лого', 'Черная+белый лого', 'Серая+зеленый лого', 'Серая+белый лого', 'Белая+зеленый лого', 'Белая+белый лого']
+    },
   ];
 </script>
 

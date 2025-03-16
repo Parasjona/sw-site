@@ -23,6 +23,14 @@ body {
 
 :root {
   --black: rgb(0, 0, 0);
+  --black-green: rgb(1, 54, 19);
+  --black-white: rgb(37, 38, 37);
+  --grey: rgb(128, 128, 128);
+  --grey-green: rgb(58, 126, 59);
+  --grey-white: rgb(123, 121, 121);
+  --white: rgb(255, 255, 255);
+  --white-green: rgb(161, 212, 136);
+  --white-white: rgb(250, 227, 227);
   --red: rgb(204, 0, 0);
   --yellow: rgb(243, 219, 9);
   --dark-yellow: rgb(204, 153, 0);
