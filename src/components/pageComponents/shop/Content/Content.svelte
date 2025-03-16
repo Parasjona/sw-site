@@ -38,8 +38,22 @@
       name: 'Кепка',
       category: 'Snake Way Division',
       price: 1900,
-      colors: ['black-green', 'black-white', 'grey-green', 'grey-white', 'white-green', 'white-white'],
-      colorTooltips: ['Черная + зеленый лого', 'Черная + белый лого', 'Серая + зеленый лого', 'Серая + белый лого', 'Белая + зеленый лого', 'Белая + белый лого'],
+      colors: [
+        'black-green',
+        'black-white',
+        'grey-green',
+        'grey-white',
+        'white-green',
+        'white-white'
+      ],
+      colorTooltips: [
+        'Черная + зеленый лого',
+        'Черная + белый лого',
+        'Серая + зеленый лого',
+        'Серая + белый лого',
+        'Белая + зеленый лого',
+        'Белая + белый лого'
+      ],
       photo: ['cap1.jpg', 'cap2.jpg', 'cap3.jpg', 'cap4.jpg'],
       sizeTooltips: ['универсальный']
     },
@@ -58,7 +72,7 @@
       price: 700,
       sizes: ['38-42', '42-45'],
       colorTooltips: ['желтые и черные'],
-      photo: ['socks1.jpg', 'socks2.jpg'],
+      photo: ['socks1.jpg', 'socks2.jpg']
     },
     {
       article: '008',
@@ -67,8 +81,8 @@
       price: 700,
       photo: ['hat1.jpg', 'hat2.jpg', 'hat3.jpg', 'hat4.jpg'],
       sizeTooltips: ['без отворота', 'с отворотом'],
-      sizes: ['one', 'two'],
-    },
+      sizes: ['one', 'two']
+    }
   ];
 </script>
 
