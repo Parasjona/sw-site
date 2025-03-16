@@ -14,11 +14,15 @@
   export let price: number;
   export let sizes: string[] = ['one size'];
   export let colors: string[] = ['one color'];
+  export let colorTooltips: string[] = ['one color'];
   export let photo: string;
 
   let quantity: number = 1;
   let currentSize: string = sizes[0];
   let currentColor: string = colors[0];
+
+  let containerSwitcherSize: HTMLDivElement;
+  let containerSwitcherColor: HTMLDivElement;
 
   const handleSizeClick = (size: string) => {
     currentSize = size;
@@ -79,22 +83,25 @@
       </div>
     </div>
     <div class="modal-switcher-line-wrapper">
-      <Switcher label="Размер ">
+      <Switcher label="Размер" container={containerSwitcherSize}>
         {#each sizes as sizeName}
           <SwitcherButton
             on:click={() => handleSizeClick(sizeName)}
             text={sizeName}
             aria-current={sizeName === currentSize}
+            container={containerSwitcherSize}
           />
         {/each}
       </Switcher>
-      <Switcher label="Цвет">
-        {#each colors as colorName}
+      <Switcher label="Цвет" container={containerSwitcherColor}>
+        {#each colors as colorName, index (index)}
           <SwitcherButton
             on:click={() => handleColorClick(colorName)}
             text={colorName === 'one color' ? colorName : ''}
             color={colorName}
             aria-current={colorName === currentColor}
+            container={containerSwitcherColor}
+            tooltipText={colorTooltips[index]}
           />
         {/each}
       </Switcher>

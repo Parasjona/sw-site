@@ -1,8 +1,9 @@
 <script lang="ts">
   export let label: string = '';
+  export let container: HTMLElement = null;
 </script>
 
-<div class="wrapper">
+<div class="wrapper" bind:this={container}>
   <div class="label">{label}</div>
   <div class="options">
     <slot />
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   .label {
     font-size: 28px;

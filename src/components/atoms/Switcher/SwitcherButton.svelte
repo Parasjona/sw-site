@@ -1,11 +1,49 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   export let text: string = '';
   export let color: string = '';
+  export let tooltipText: string = '';
+  export let container: HTMLElement = null;
 
   $: style = !!color && color !== 'one size' ? `background-color: var(--${color})` : '';
+  let textBlock: HTMLDivElement;
+  let pointDiv: HTMLDivElement;
+  let position: 'left' | 'right' = 'left';
+
+  function calcPosition() {
+    if (container && textBlock) {
+      const textRect: DOMRect = textBlock.getBoundingClientRect();
+      const containerRect: DOMRect = container.getBoundingClientRect();
+
+      if (textRect.x - containerRect.x + textRect.width > containerRect.width) {
+        position = 'right';
+      }
+    }
+  }
+
+  onMount(() => {
+    calcPosition();
+  });
+
+  const resetPosition = () => {
+    if (pointDiv && !pointDiv.matches(':hover')) position = 'left';
+  };
 </script>
 
-<button on:click {style} {...$$restProps}>{text}</button>
+<button on:click {style} {...$$restProps} on:mouseenter={calcPosition} bind:this={pointDiv}
+  >{text}
+  {#if tooltipText}
+    <div
+      class="text-block"
+      bind:this={textBlock}
+      style={'right: 0'}
+      on:transitionend={resetPosition}
+    >
+      {tooltipText}
+    </div>
+  {/if}
+</button>
 
 <style>
   button {
@@ -17,6 +55,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
 
     min-width: 24px;
     min-height: 24px;
@@ -39,5 +78,32 @@
       border-color: var(--button-press-grey);
       background-color: var(--light-grey);
     }
+  }
+  .text-block {
+    position: absolute;
+    text-align: start;
+
+    color: var(--black);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 125% */
+    letter-spacing: -0.1px;
+
+    padding: 2px;
+    border: 1px solid var(--grey);
+    height: fit-content;
+
+    background: var(--white);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+
+    bottom: 30px;
+  }
+
+  button:hover .text-block {
+    opacity: 1;
   }
 </style>

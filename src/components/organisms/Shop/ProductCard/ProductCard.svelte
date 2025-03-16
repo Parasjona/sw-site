@@ -11,6 +11,7 @@
   export let photo: string[] = [''];
   export let sizes: string[] = undefined;
   export let colors: string[] = undefined;
+  export let colorTooltips: string[] = undefined;
 
   let showModal = false;
 
@@ -79,6 +80,7 @@
   {category}
   {sizes}
   {colors}
+  {colorTooltips}
   photo={photo[0]}
 />
 

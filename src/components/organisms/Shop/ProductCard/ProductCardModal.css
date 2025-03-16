@@ -20,6 +20,7 @@
   gap: 10px;
 }
 .modal-switcher-line-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
