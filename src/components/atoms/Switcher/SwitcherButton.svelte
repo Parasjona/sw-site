@@ -63,11 +63,10 @@
     text-align: start;
 
     color: var(--black);
-    font-family: Inter;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 15px; /* 125% */
+    line-height: 16px;
     letter-spacing: -0.1px;
 
     padding: 2px;
@@ -79,7 +78,7 @@
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
 
-    bottom: 30px;
+    bottom: 35px;
   }
 
   button:hover .text-block {
