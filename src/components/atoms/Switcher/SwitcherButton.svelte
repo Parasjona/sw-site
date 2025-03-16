@@ -4,41 +4,20 @@
   export let text: string = '';
   export let color: string = '';
   export let tooltipText: string = '';
-  export let container: HTMLElement = null;
+  export let position: 'left' | 'right' = 'left';
 
   $: style = !!color && color !== 'one size' ? `background-color: var(--${color})` : '';
   let textBlock: HTMLDivElement;
   let pointDiv: HTMLDivElement;
-  let position: 'left' | 'right' = 'left';
-
-  function calcPosition() {
-    if (container && textBlock) {
-      const textRect: DOMRect = textBlock.getBoundingClientRect();
-      const containerRect: DOMRect = container.getBoundingClientRect();
-
-      if (textRect.x - containerRect.x + textRect.width > containerRect.width) {
-        position = 'right';
-      }
-    }
-  }
-
-  onMount(() => {
-    calcPosition();
-  });
-
-  const resetPosition = () => {
-    if (pointDiv && !pointDiv.matches(':hover')) position = 'left';
-  };
 </script>
 
-<button on:click {style} {...$$restProps} on:mouseenter={calcPosition} bind:this={pointDiv}
+<button on:click {style} {...$$restProps} bind:this={pointDiv}
   >{text}
-  {#if tooltipText}
+  {#if tooltipText && tooltipText !== 'one color'}
     <div
       class="text-block"
       bind:this={textBlock}
-      style={'right: 0'}
-      on:transitionend={resetPosition}
+      style={position === 'left' ? 'left: 0' : 'right: 0'}
     >
       {tooltipText}
     </div>

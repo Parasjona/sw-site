@@ -1,9 +1,8 @@
 <script lang="ts">
   export let label: string = '';
-  export let container: HTMLElement = null;
 </script>
 
-<div class="wrapper" bind:this={container}>
+<div class="wrapper">
   <div class="label">{label}</div>
   <div class="options">
     <slot />
