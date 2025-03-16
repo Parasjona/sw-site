@@ -13,6 +13,7 @@
   export let category: string = 'Snake Way Division';
   export let price: number;
   export let sizes: string[] = ['one size'];
+  export let sizeTooltips: string[] = [''];
   export let colors: string[] = ['one color'];
   export let colorTooltips: string[] = ['one color'];
   export let photo: string;
@@ -80,12 +81,14 @@
       </div>
     </div>
     <div class="modal-switcher-line-wrapper">
-        {#each sizes as sizeName}
       <Switcher label="Размер">
+        {#each sizes as sizeName, index (index)}
           <SwitcherButton
             on:click={() => handleSizeClick(sizeName)}
             text={sizeName}
             aria-current={sizeName === currentSize}
+            tooltipText={sizeTooltips[index]}
+            position="left"
           />
         {/each}
       </Switcher>
@@ -97,6 +100,7 @@
             color={colorName}
             aria-current={colorName === currentColor}
             tooltipText={colorTooltips[index]}
+            position="right"
           />
         {/each}
       </Switcher>
