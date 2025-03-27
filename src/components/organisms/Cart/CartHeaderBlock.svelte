@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base as BASE_URL } from '$app/paths';
   import { Badge } from '@components/atoms/Badge';
-  import ShopingCart from './icons/shopCart.svelte';
+  import ShopingCart from './icons/cartIcon.svelte';
   import { cartQuantity } from '@store/cartQuantity';
 </script>
 
@@ -36,13 +36,13 @@
     box-sizing: border-box;
   }
   .shoping-cart-icon {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
   }
   .badge-wrapper {
     position: absolute;
     top: 8%;
-    left: 7%;
+    left: 25%;
     width: 100%;
     display: flex;
     justify-content: center;
