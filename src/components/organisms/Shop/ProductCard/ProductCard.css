@@ -32,10 +32,11 @@
   font-size: 23px;
 }
 .product-card-button {
+  margin-top: 13px;
   width: 272px;
   height: 58px;
   font-family: 'Century Gothic Bold';
-  font-size: 30px;
+  font-size: 20px;
 
   &:hover {
     box-shadow: var(--hover-shadow);
