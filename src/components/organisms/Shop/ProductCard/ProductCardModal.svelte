@@ -20,13 +20,17 @@
 
   let quantity: number = 1;
   let currentSize: string = sizes[0];
+  let currentSizeName: string = sizeNames[0];
   let currentColor: string = colors[0];
+  let currentColorName: string = colorNames[0];
 
-  const handleSizeClick = (size: string) => {
+  const handleSizeClick = (size: string, sizeName: string) => {
     currentSize = size;
+    currentSizeName = sizeName;
   };
-  const handleColorClick = (color: string) => {
+  const handleColorClick = (color: string, colorName: string) => {
     currentColor = color;
+    currentColorName = colorName;
   };
 
   const handleIncrement = () => {
@@ -60,7 +64,9 @@
           price: price,
           quantity: quantity,
           color: currentColor,
+          colorName: currentColorName,
           size: currentSize,
+          sizeName: currentSizeName,
           photo: photo
         });
       }
@@ -84,7 +90,7 @@
       <Switcher label="Размер">
         {#each sizes as sizeName, index (index)}
           <SwitcherButton
-            on:click={() => handleSizeClick(sizeName)}
+            on:click={() => handleSizeClick(sizeName, sizeNames[index])}
             text={sizeName}
             aria-current={sizeName === currentSize}
             tooltipText={sizeNames[index]}
@@ -95,7 +101,7 @@
       <Switcher label="Цвет">
         {#each colors as colorName, index (index)}
           <SwitcherButton
-            on:click={() => handleColorClick(colorName)}
+            on:click={() => handleColorClick(colorName, colorNames[index])}
             text={colorName === 'one color' ? colorName : ''}
             color={colorName}
             aria-current={colorName === currentColor}
