@@ -13,9 +13,11 @@
   }
   function cartToMessage() {
     return $cart.reduce((acc, item) => {
+      const size = item.size !== 'one size' ? ` ${item.sizeName}` : '';
+      const color = item.color !== 'one color' ? ` ${item.colorName}` : '';
       return (
         acc +
-        `%0AАрт.${item.article} ${item.name}: ${item.quantity}шт. на ${item.quantity * item.price}р.`
+        `%0AАрт.${item.article} ${item.name}${color}${size}: ${item.quantity}шт. на ${item.quantity * item.price}р.`
       );
     }, '');
   }
