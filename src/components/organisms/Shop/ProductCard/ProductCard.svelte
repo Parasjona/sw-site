@@ -10,9 +10,9 @@
   export let price: number;
   export let photo: string[] = [''];
   export let sizes: string[] = undefined;
-  export let sizeTooltips: string[] = undefined;
+  export let sizeNames: string[] = undefined;
   export let colors: string[] = undefined;
-  export let colorTooltips: string[] = undefined;
+  export let colorNames: string[] = undefined;
 
   let showModal = false;
 
@@ -80,9 +80,9 @@
   {price}
   {category}
   {sizes}
-  {sizeTooltips}
+  {sizeNames}
   {colors}
-  {colorTooltips}
+  {colorNames}
   photo={photo[0]}
 />
 

@@ -13,9 +13,9 @@
   export let category: string = 'Snake Way Division';
   export let price: number;
   export let sizes: string[] = ['one size'];
-  export let sizeTooltips: string[] = [''];
+  export let sizeNames: string[] = [''];
   export let colors: string[] = ['one color'];
-  export let colorTooltips: string[] = ['one color'];
+  export let colorNames: string[] = ['one color'];
   export let photo: string;
 
   let quantity: number = 1;
@@ -87,7 +87,7 @@
             on:click={() => handleSizeClick(sizeName)}
             text={sizeName}
             aria-current={sizeName === currentSize}
-            tooltipText={sizeTooltips[index]}
+            tooltipText={sizeNames[index]}
             position="left"
           />
         {/each}
@@ -99,7 +99,7 @@
             text={colorName === 'one color' ? colorName : ''}
             color={colorName}
             aria-current={colorName === currentColor}
-            tooltipText={colorTooltips[index]}
+            tooltipText={colorNames[index]}
             position="right"
           />
         {/each}
