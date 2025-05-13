@@ -82,6 +82,14 @@
       photo: ['hat1.jpg', 'hat2.jpg', 'hat3.jpg', 'hat4.jpg'],
       sizeNames: ['без отворота', 'с отворотом'],
       sizes: ['one', 'two']
+    },
+    {
+      article: '009',
+      name: 'Черная футболка',
+      category: 'Snake Way Division',
+      price: 3000,
+      photo: ['shirt1.jpg', 'shirt2.jpg', 'shirt3.jpg'],
+      sizes: ['XS', 'S']
     }
   ];
 </script>
