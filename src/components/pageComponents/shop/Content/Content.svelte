@@ -78,7 +78,7 @@
       article: '008',
       name: 'Демисезонная шапка',
       category: 'Snake Way Division',
-      price: Будут позже,
+      price: 700,
       photo: ['hat1.jpg', 'hat2.jpg', 'hat3.jpg', 'hat4.jpg'],
       sizeNames: ['без отворота', 'с отворотом'],
       sizes: ['one', 'two']
