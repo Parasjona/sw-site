@@ -104,7 +104,7 @@
       name: 'Бандана',
       category: 'Snake Way Division',
       price: 800,
-      photo: ['bandana1.jpg', 'bandana2.jpg', 'bandana3.jpg','bandana4.jpg','bandana5.jpg',],
+      photo: ['bandana1.jpg', 'bandana2.jpg', 'bandana3.jpg', 'bandana4.jpg', 'bandana5.jpg'],
       sizeNames: ['черный', 'белый', 'красный', 'зеленый', 'желтый'],
       sizes: ['bl', 'wt', 'rd', 'gr', 'ye']
     }
