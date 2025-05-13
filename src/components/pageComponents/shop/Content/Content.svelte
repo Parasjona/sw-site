@@ -78,7 +78,7 @@
       article: '008',
       name: 'Демисезонная шапка',
       category: 'Snake Way Division',
-      price: 700,
+      price: Будут позже,
       photo: ['hat1.jpg', 'hat2.jpg', 'hat3.jpg', 'hat4.jpg'],
       sizeNames: ['без отворота', 'с отворотом'],
       sizes: ['one', 'two']
@@ -87,9 +87,9 @@
       article: '009',
       name: 'Черная футболка',
       category: 'Snake Way Division',
-      price: 3000,
+      price: 3100,
       photo: ['shirt1.jpg', 'shirt2.jpg', 'shirt3.jpg'],
-      sizes: ['XS', 'S']
+      sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']
     },
     {
       article: '010',
@@ -97,7 +97,16 @@
       category: 'Snake Way Division',
       price: 2600,
       photo: ['shirtw1.jpg', 'shirtw2.jpg', 'shirtw3.jpg'],
-      sizes: ['XS', 'S']
+      sizes: ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL']
+    },
+    {
+      article: '011',
+      name: 'Бандана',
+      category: 'Snake Way Division',
+      price: 800,
+      photo: ['bandana1.jpg', 'bandana2.jpg', 'bandana3.jpg','bandana4.jpg','bandana5.jpg',],
+      sizeNames: ['черный', 'белый', 'красный', 'зеленый', 'желтый'],
+      sizes: ['bl', 'wt', 'rd', 'gr', 'ye']
     }
   ];
 </script>
