@@ -90,6 +90,14 @@
       price: 3000,
       photo: ['shirt1.jpg', 'shirt2.jpg', 'shirt3.jpg'],
       sizes: ['XS', 'S']
+    },
+    {
+      article: '010',
+      name: 'Белая футболка',
+      category: 'Snake Way Division',
+      price: 2600,
+      photo: ['shirtw1.jpg', 'shirtw2.jpg', 'shirtw3.jpg'],
+      sizes: ['XS', 'S']
     }
   ];
 </script>
