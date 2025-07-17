@@ -15,9 +15,9 @@
       category: 'Snake Way Division',
       price: 400,
       colors: [
-        'black-green',
-        'grey-green',
-        'black-white',
+        'green',
+        'grey',
+        'white',
       ],
       colorNames: [
         'Черная с зеленым лого',
