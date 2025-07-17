@@ -116,9 +116,9 @@
       price: 800,
       colors: [
         'black',
-        'white',
+        'white-white',
         'red',
-        'green',
+        'grey-green',
         'yellow',
       ],
       colorNames: [
