@@ -15,9 +15,9 @@
       category: 'Snake Way Division',
       price: 400,
       colors: [
-        'green',
+        'black-green',
         'grey',
-        'white',
+        'white-white',
       ],
       colorNames: [
         'Черная с зеленым лого',
@@ -114,9 +114,21 @@
       name: 'Бандана',
       category: 'Snake Way Division',
       price: 800,
+      colors: [
+        'black',
+        'white',
+        'red',
+        'green',
+        'yellow',
+      ],
+      colorNames: [
+        'Черный',
+        'Белый',
+        'Красный',
+        'Зеленый',
+        'Желтый',
+      ],
       photo: ['bandana1.jpg', 'bandana2.jpg', 'bandana3.jpg', 'bandana4.jpg', 'bandana5.jpg'],
-      sizeNames: ['черный', 'белый', 'красный', 'зеленый', 'желтый'],
-      sizes: ['bl', 'wt', 'rd', 'gr', 'ye']
     }
   ];
 </script>
