@@ -14,6 +14,16 @@
       name: 'Брелок-ремувка',
       category: 'Snake Way Division',
       price: 400,
+      colors: [
+        'black-green',
+        'grey-green',
+        'black-white',
+      ],
+      colorNames: [
+        'Черная с зеленым лого',
+        'Черная с серым лого',
+        'Черная с белым лого',
+      ],
       photo: ['keychain1.jpg', 'keychain2.jpg', 'keychain3.jpg']
     },
     {
